@@ -33,5 +33,10 @@
 
 .header-button {
     cursor: pointer;
-    color: #D9E9EF;
+    color: #d9e9ef;
+}
+
+.header-button:hover {
+    cursor: pointer;
+    color: #afbfc5;
 }
