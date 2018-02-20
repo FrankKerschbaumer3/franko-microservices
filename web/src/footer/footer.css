@@ -1,0 +1,44 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #56727C;
+    margin-top: auto;
+    color: #FFFFFF;
+}
+/* to be added to the <body> */
+.with-sticky-footer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.footer-section {
+    display: flex;
+    align-items: center;
+}
+
+.footer-item {
+    padding: 25px;
+    font-size: 1em;
+}
+
+/* Only stick margin to items with items to their left */
+.footer-item + .footer-item {
+    margin-left: 5px;
+}
+
+.footer-item.item-selected {
+    background-color: #415F69;
+    border-radius: 4px;
+}
+
+.footer-logo {
+    font-size: 20px;
+    line-height: 0;
+    color: white;
+}
+
+.footer-button {
+    cursor: pointer;
+    color: #D9E9EF;
+}

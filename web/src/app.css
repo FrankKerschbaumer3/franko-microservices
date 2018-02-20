@@ -1,0 +1,5 @@
+html,
+body {
+    margin: 0;      /* For no-edge header/footer */
+    height: 100%;
+}
