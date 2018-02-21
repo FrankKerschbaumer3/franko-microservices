@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+service IssueFetcher {
+    rpc FetchIssues (FetchReq) returns (FetchReply) {}
+}
+
+message FetchReq {
+    string repoId = 1;
+}
+
+message FetchReply {
+    repeated Issue issues = 1;
+}
+
+message Issue {
+    string repoId = 1;
+    string title = 2;
+    string timestamp = 3;
+    string status = 4;
+}
+
