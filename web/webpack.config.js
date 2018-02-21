@@ -74,13 +74,11 @@ if(process.env.NODE_ENV === "production") {
   config.entry = ['react-hot-loader/patch', './src/index.jsx']
   config.devtool = 'eval-source-map'
   config.devServer = {
-    contentBase: "./public",
-      noInfo: true, // do not print bundle build stats
-      hot: true,    // Hot reloading
-      inline: true, // embed the webpack-dev-server runtime into the bundle
-      historyApiFallback: true, // serve index.html in place of 404 responses to allow HTML5 history
-      port: PORT,
-      host: '127.0.0.1'
+    contentBase: "./",
+    noInfo: true, // do not print bundle build stats
+    historyApiFallback: true, // serve index.html in place of 404 responses to allow HTML5 history
+    port: PORT,
+    host: '127.0.0.1'
   }
 
   config.plugins.push(
