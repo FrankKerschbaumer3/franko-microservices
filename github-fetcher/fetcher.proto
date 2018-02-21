@@ -1,4 +1,5 @@
 syntax = "proto3";
+package main;
 
 service IssueFetcher {
     rpc FetchIssues (FetchReq) returns (FetchReply) {}

@@ -1,4 +1,5 @@
 syntax = "proto3";
+package main;
 
 service Auth {
     rpc Authenticate (AuthRequest) returns (AuthReply) {}
