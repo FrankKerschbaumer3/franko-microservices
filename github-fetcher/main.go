@@ -3,16 +3,16 @@ package main
 import (
 	"flag"
 	"fmt"
+	"golang.org/x/net/context"
+	"google.golang.org/grpc"
 	"log"
 	"net"
-	"google.golang.org/grpc"
-	"golang.org/x/net/context"
 )
 
-type issueFetcher struct {}
+type issueFetcher struct{}
 
 func (*issueFetcher) FetchIssues(context.Context, *FetchReq) (*FetchReply, error) {
-	return &FetchReply{Issues:nil}, nil
+	return &FetchReply{Issues: nil}, nil
 }
 
 func main() {
