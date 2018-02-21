@@ -2,19 +2,19 @@ package main
 
 import (
 	"flag"
-	"net"
 	"fmt"
-	"log"
-	"google.golang.org/grpc"
-	"golang.org/x/net/context"
 	pb "github.com/MatthewEdge/franko-services/auth-service/auth"
+	"golang.org/x/net/context"
+	"google.golang.org/grpc"
+	"log"
+	"net"
 )
 
 // Authentication Service impl
-type authService struct {}
+type authService struct{}
 
 func (*authService) Authenticate(ctx context.Context, req *pb.AuthRequest) (*pb.AuthReply, error) {
-	return &pb.AuthReply{}, nil
+	return &pb.AuthReply{IsAuthenticated: true}, nil
 }
 
 func main() {
