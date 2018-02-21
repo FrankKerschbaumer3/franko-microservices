@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+service Auth {
+    rpc Authenticate (AuthRequest) returns (AuthReply) {}
+}
+
+// The request message containing user credentials
+message AuthRequest {
+    string name = 1;
+    string pass = 2;
+}
+
+// The response message containing the greetings
+message AuthReply {
+    bool isAuthenticated = 1;
+}
