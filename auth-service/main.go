@@ -3,7 +3,6 @@ package main
 import (
 	"flag"
 	"fmt"
-	pb "github.com/MatthewEdge/franko-services/auth-service/auth"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"log"
@@ -13,8 +12,8 @@ import (
 // Authentication Service impl
 type authService struct{}
 
-func (*authService) Authenticate(ctx context.Context, req *pb.AuthRequest) (*pb.AuthReply, error) {
-	return &pb.AuthReply{IsAuthenticated: true}, nil
+func (*authService) Authenticate(ctx context.Context, req *AuthRequest) (*AuthReply, error) {
+	return &AuthReply{IsAuthenticated: true}, nil
 }
 
 func main() {
@@ -28,6 +27,6 @@ func main() {
 
 	var opts []grpc.ServerOption
 	grpcServer := grpc.NewServer(opts...)
-	pb.RegisterAuthServer(grpcServer, &authService{})
+	RegisterAuthServer(grpcServer, &authService{})
 	grpcServer.Serve(lis)
 }

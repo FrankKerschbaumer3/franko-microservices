@@ -11,7 +11,7 @@ It has these top-level messages:
 	AuthRequest
 	AuthReply
 */
-package auth
+package main
 
 import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
